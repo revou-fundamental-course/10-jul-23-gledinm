@@ -1,81 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>BMI Calculator</title>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, iniitial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 </head>
-<body>
-    
-    <div class="container">
-        <div class="box">
-          <h1>BMI Calculator</h1>
-          <div class="content">
 
-
-            <div class="input">
-                <label for="height">Age</label>
-                <input type="text" class="text-input" id="age" autocomplete="off" required/>
-            </div>
-
-            <div class="gender">
-
-                <label class="container">
-                    <input type="radio" name="radio" id="m"><p class="text">Male</p>
-                    <span class="checkmark"></span>
-                  </label>
-
-
-                <label class="container">
-                    <input type="radio" name="radio" id="f" ><p class="text">Female</p>
-                      <span class="checkmark"></span>
-                    </label>
-
-            </div>
-
-            <div class="containerHW">
-            <div class="inputH">
-              <label for="height">Height(cm)</label>
-              <input type="number" id="height" required>
-            </div>
-
-            <div class="inputW">
-              <label for="weight">Weight(kg)</label>
-              <input type="number" id="weight" required>
-            </div>
-          </div>
-
-            <button class="calculate" id="submit" onclick="calculate();">Calculate BMI</button>
-          </div>
-          <div class="result">
-            <p>Your BMI is</p>
-            <div id="result">00.00</div>
-            <p class="comment"></p>
-          </div>
-          <div class="footer"><a class="footer-text" target="_blank" href="https://myskypower.net/">By My Sky Power</a></div>
-        
-      
-
-        </div>
-      </div>
-
-
-
-      
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p id="modalText"></p>
-    </div></div>
-
-
-
-    
-<script src="script.js"></script>
-
+<body style="background-image:url(img/bgl.jpg);background-size:cover;">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="container">
+				<a href="https://blogbugabagi.blogspot.com" class="navbar-brand">Kalkulator<b>BMI</b></a>
+			</div>
+		</div>
+	</nav>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+		<h3 class="text-primary"><b>BMI</b> Body Mass Index <small>Indeks Masa Tubuh</small></h3>
+		<hr style="border-top:1px dotted #ccc;" />
+		<form>
+			<div class="container">
+				<div class="form-inline">
+					<div class="row">
+						<label>Berat Badan (kg):</label>
+					</div>
+					<div class="row">
+						<input type="text" placeholder="Masukan berat badan" class="form-control" id="weight">
+					</div>
+				</div>
+				<div class="form-inline">
+					<div class="row">
+						<label>Tinggi Badan (cm):</label>
+					</div>
+					<div class="row">
+						<input type="text"placeholder="Masukan tinggi badan" class="form-control" id="height">
+					</div>
+						
+				</div>
+				<br />
+				<div class="row">
+					<button class="btn btn-primary" type="button" onClick="calculateBmi()">HITUNG</button>
+				</div>
+				<br /><br />
+				<div class="form-inline">
+					<div class="row">
+						<label>BMI:</label>
+					</div>
+					<div class="row">
+					<input class="form-control" type="text" id="bmi" size="28" readonly >
+				</div>
+				</div>
+				<br />
+				<div class="form-inline">
+					<div class="row">
+						<label>Hasil:</label>
+					</div>
+					<div class="row">
+						<input class="form-control" type="text" id="result" size="28" readonly>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<button class="btn btn-danger" type="reset">Reset</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="js/script.js"></script>
 </body>
+
 </html>
